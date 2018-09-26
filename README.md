@@ -1,10 +1,12 @@
 # psi4_examples
 
-This project contains example files for performing quantum mechanical calculations on moleulces using Psi4 [1]. Included are run file that can be used for submission to a Slurm [2] batch system.
+This project contains examples for performing quantum mechanical calculations on molecules using Psi4 [1]. Included are run files that can be used for submission to a Slurm [2] batch system.
 
 This includes the following:
 1. 2_4_5-trichlorophenoxyacetic_acid
+
     a. HF/6-31G(d)//HF/6-31G(d) optimizations (minima)
+
     b. HF/6-31G(d)//HF/6-31G(d) frequency analysis
 
 References:
