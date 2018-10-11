@@ -1,0 +1,615 @@
+
+    -----------------------------------------------------------------------
+          Psi4: An Open-Source Ab Initio Electronic Structure Package
+                               Psi4 1.1a2.dev170 
+
+                         Git: Rev {master} e4fcd91 dirty
+
+
+    J. M. Turney, A. C. Simmonett, R. M. Parrish, E. G. Hohenstein,
+    F. A. Evangelista, J. T. Fermann, B. J. Mintz, L. A. Burns, J. J. Wilke,
+    M. L. Abrams, N. J. Russ, M. L. Leininger, C. L. Janssen, E. T. Seidl,
+    W. D. Allen, H. F. Schaefer, R. A. King, E. F. Valeev, C. D. Sherrill,
+    and T. D. Crawford, WIREs Comput. Mol. Sci. 2, 556-565 (2012)
+    (doi: 10.1002/wcms.93)
+
+
+                         Additional Contributions by
+    A. E. DePrince, U. Bozkaya, A. Yu. Sokolov, D. G. A. Smith, R. Di Remigio,
+    R. M. Richard, J. F. Gonthier, H. R. McAlexander, M. Saitow, and
+    B. P. Pritchard
+    -----------------------------------------------------------------------
+
+
+    Psi4 started on: Tuesday, 04 April 2017 09:45AM
+
+    Process ID:  11169
+    PSIDATADIR: /usr/local/hpc5/psi4conda/envs/p4env/share/psi4
+    Memory:     500.0 MiB
+    Threads:    16
+    
+  ==> Input File <==
+
+--------------------------------------------------------------------------
+memory 110 Gb
+
+molecule molecule_2_psi {
+0 1
+    C           -0.719743990292     0.012301564546     0.005658769153
+    H           -1.074916777877     1.038032036332    -0.018183723069
+    H           -1.106621706473    -0.459864178762     0.901864569381
+    H           -1.121239107053    -0.505833948326    -0.858132438726
+    O            0.681563884978    -0.064329684129    -0.003984221719
+    H            1.055732526594     0.802152239195    -0.029693912495
+}
+
+set globals {
+  reference rhf
+  opt_type ts
+  basis 6-31G(d)
+}
+frequency('scf')
+--------------------------------------------------------------------------
+
+  Memory set to 110.000 GiB by Python script.
+hessian() will perform analytic frequency computation.
+
+*** tstart() called on wr29
+*** at Tue Apr  4 09:45:16 2017
+
+
+         ---------------------------------------------------------
+                                   SCF
+            by Justin Turney, Rob Parrish, and Andy Simmonett
+                              RHF Reference
+                       16 Threads, 110000 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           C         -0.719743990292     0.012301564546     0.005658769153    12.000000000000
+           H         -1.074916777877     1.038032036332    -0.018183723069     1.007825032070
+           H         -1.106621706473    -0.459864178762     0.901864569381     1.007825032070
+           H         -1.121239107053    -0.505833948326    -0.858132438726     1.007825032070
+           O          0.681563884978    -0.064329684129    -0.003984221719    15.994914619560
+           H          1.055732526594     0.802152239195    -0.029693912495     1.007825032070
+
+  Running in c1 symmetry.
+
+  Rotational constants: A =      4.39458  B =      0.84294  C =      0.81396 [cm^-1]
+  Rotational constants: A = 131746.29915  B =  25270.55615  C =  24401.99936 [MHz]
+  Nuclear repulsion =   40.727598062498480
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 18
+  Nalpha       = 9
+  Nbeta        = 9
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is DF.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is SAD.
+  Energy threshold   = 1.00e-08
+  Density threshold  = 1.00e-08
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/6-31g_d_.gbs
+    Number of shells: 20
+    Number of basis function: 38
+    Number of Cartesian functions: 38
+    Spherical Harmonics?: false
+    Max angular momentum: 2
+
+  ==> Pre-Iterations <==
+
+   -------------------------------------------------------
+    Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
+   -------------------------------------------------------
+     A         38      38       0       0       0       0
+   -------------------------------------------------------
+    Total      38      38       9       9       9       0
+   -------------------------------------------------------
+
+  ==> Integral Setup <==
+
+  ==> DFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    OpenMP threads:             16
+    Integrals threads:          16
+    Memory (MB):             78678
+    Algorithm:                Core
+    Integral Cache:           NONE
+    Schwarz Cutoff:          1E-12
+    Fitting Condition:       1E-12
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/cc-pvdz-jkfit.gbs
+    Number of shells: 84
+    Number of basis function: 262
+    Number of Cartesian functions: 262
+    Spherical Harmonics?: false
+    Max angular momentum: 3
+
+  Minimum eigenvalue in the overlap matrix is 9.3265209562E-03.
+  Using Symmetric Orthogonalization.
+
+  SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF.
+
+  ==> Iterations <==
+
+                           Total Energy        Delta E     RMS |[F,P]|
+
+   @DF-RHF iter   0:  -115.46486660583065   -1.15465e+02   6.71184e-02 
+   @DF-RHF iter   1:  -114.92934300798662    5.35524e-01   1.18214e-02 
+   @DF-RHF iter   2:  -115.00537944868208   -7.60364e-02   7.01124e-03 DIIS
+   @DF-RHF iter   3:  -115.03110951218272   -2.57301e-02   1.16450e-03 DIIS
+   @DF-RHF iter   4:  -115.03305974985787   -1.95024e-03   2.62278e-04 DIIS
+   @DF-RHF iter   5:  -115.03317973653832   -1.19987e-04   7.09479e-05 DIIS
+   @DF-RHF iter   6:  -115.03318751456503   -7.77803e-06   1.85486e-05 DIIS
+   @DF-RHF iter   7:  -115.03318800731398   -4.92749e-07   4.73523e-06 DIIS
+   @DF-RHF iter   8:  -115.03318804349627   -3.61823e-08   1.14220e-06 DIIS
+   @DF-RHF iter   9:  -115.03318804608016   -2.58389e-09   2.54023e-07 DIIS
+   @DF-RHF iter  10:  -115.03318804621679   -1.36637e-10   4.70693e-08 DIIS
+   @DF-RHF iter  11:  -115.03318804622128   -4.49063e-12   9.51419e-09 DIIS
+
+  ==> Post-Iterations <==
+
+    Orbital Energies (a.u.)
+    -----------------------
+
+    Doubly Occupied:                                                      
+
+       1A    -20.553151     2A    -11.266827     3A     -1.357958  
+       4A     -0.927258     5A     -0.693491     6A     -0.619197  
+       7A     -0.595952     8A     -0.496892     9A     -0.440948  
+
+    Virtual:                                                              
+
+      10A      0.221996    11A      0.278410    12A      0.325849  
+      13A      0.332014    14A      0.395441    15A      0.763092  
+      16A      0.763806    17A      0.797068    18A      1.084394  
+      19A      1.135642    20A      1.135712    21A      1.184026  
+      22A      1.218555    23A      1.250125    24A      1.273016  
+      25A      1.447568    26A      1.726854    27A      1.761468  
+      28A      1.817005    29A      2.045711    30A      2.428235  
+      31A      2.459357    32A      2.511770    33A      2.609774  
+      34A      2.737227    35A      2.900896    36A      3.167927  
+      37A      4.139830    38A      4.645309  
+
+    Final Occupation by Irrep:
+              A 
+    DOCC [     9 ]
+
+  Energy converged.
+
+  @DF-RHF Final Energy:  -115.03318804622128
+
+   => Energetics <=
+
+    Nuclear Repulsion Energy =             40.7275980624984797
+    One-Electron Energy =                -237.6182221953711746
+    Two-Electron Energy =                  81.8574360866514041
+    DFT Exchange-Correlation Energy =       0.0000000000000000
+    Empirical Dispersion Energy =           0.0000000000000000
+    PCM Polarization Energy =               0.0000000000000000
+    EFP Energy =                            0.0000000000000000
+    Total Energy =                       -115.0331880462212837
+
+
+
+Properties will be evaluated at   0.000000,   0.000000,   0.000000 Bohr
+
+Properties computed using the SCF density matrix
+
+  Nuclear Dipole Moment: (a.u.)
+     X:    -2.1033      Y:     0.8195      Z:    -0.0039
+
+  Electronic Dipole Moment: (a.u.)
+     X:     1.7248      Y:    -0.1477      Z:    -0.0105
+
+  Dipole Moment: (a.u.)
+     X:    -0.3784      Y:     0.6718      Z:    -0.0144     Total:     0.7712
+
+  Dipole Moment: (Debye)
+     X:    -0.9619      Y:     1.7076      Z:    -0.0366     Total:     1.9602
+
+
+*** tstop() called on wr29 at Tue Apr  4 09:45:18 2017
+Module time:
+	user time   =      21.65 seconds =       0.36 minutes
+	system time =       0.64 seconds =       0.01 minutes
+	total time  =          2 seconds =       0.03 minutes
+Total time:
+	user time   =      21.65 seconds =       0.36 minutes
+	system time =       0.64 seconds =       0.01 minutes
+	total time  =          2 seconds =       0.03 minutes
+
+*** tstart() called on wr29
+*** at Tue Apr  4 09:45:18 2017
+
+
+         ------------------------------------------------------------
+                                   SCF HESS                          
+                          Rob Parrish, Justin Turney,                
+                       Andy Simmonett, and Alex Sokolov              
+         ------------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           C         -0.719743990292     0.012301564546     0.005658769153    12.000000000000
+           H         -1.074916777877     1.038032036332    -0.018183723069     1.007825032070
+           H         -1.106621706473    -0.459864178762     0.901864569381     1.007825032070
+           H         -1.121239107053    -0.505833948326    -0.858132438726     1.007825032070
+           O          0.681563884978    -0.064329684129    -0.003984221719    15.994914619560
+           H          1.055732526594     0.802152239195    -0.029693912495     1.007825032070
+
+  Nuclear repulsion =   40.727598062498480
+
+  ==> Basis Set <==
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/6-31g_d_.gbs
+    Number of shells: 20
+    Number of basis function: 38
+    Number of Cartesian functions: 38
+    Spherical Harmonics?: false
+    Max angular momentum: 2
+
+  ==> DFJKGrad: Density-Fitted SCF Gradients <==
+
+    Gradient:                    2
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    OpenMP threads:             16
+    Integrals threads:          16
+    Memory (MB):             78678
+    Schwarz Cutoff:          0E+00
+    Fitting Condition:       1E-12
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/cc-pvdz-jkfit.gbs
+    Number of shells: 84
+    Number of basis function: 262
+    Number of Cartesian functions: 262
+    Spherical Harmonics?: false
+    Max angular momentum: 3
+
+  ==> DFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    OpenMP threads:             16
+    Integrals threads:          16
+    Memory (MB):             94413
+    Algorithm:                Core
+    Integral Cache:           NONE
+    Schwarz Cutoff:          1E-12
+    Fitting Condition:       1E-12
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/cc-pvdz-jkfit.gbs
+    Number of shells: 84
+    Number of basis function: 262
+    Number of Cartesian functions: 262
+    Spherical Harmonics?: false
+    Max angular momentum: 3
+
+
+         ------------------------------------------------------------
+                                     CPHF                           
+                                  Rob Parrish                       
+         ------------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           C         -0.719743990292     0.012301564546     0.005658769153    12.000000000000
+           H         -1.074916777877     1.038032036332    -0.018183723069     1.007825032070
+           H         -1.106621706473    -0.459864178762     0.901864569381     1.007825032070
+           H         -1.121239107053    -0.505833948326    -0.858132438726     1.007825032070
+           O          0.681563884978    -0.064329684129    -0.003984221719    15.994914619560
+           H          1.055732526594     0.802152239195    -0.029693912495     1.007825032070
+
+  Nuclear repulsion =   40.727598062498480
+  Reference energy  = -115.033188046221284
+
+  ==> Basis Set <==
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/6-31g_d_.gbs
+    Number of shells: 20
+    Number of basis function: 38
+    Number of Cartesian functions: 38
+    Spherical Harmonics?: false
+    Max angular momentum: 2
+
+  ==> CGRSolver (by Rob Parrish) <==
+
+   Number of roots    =        18
+   Preconditioning    =    JACOBI
+   Convergence cutoff =     1E-06
+   Maximum iterations =       100
+
+  ==> CPHFRHamiltonian (by Rob Parrish) <== 
+
+  ==> DFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    OpenMP threads:             16
+    Integrals threads:          16
+    Memory (MB):             94413
+    Algorithm:                Core
+    Integral Cache:           NONE
+    Schwarz Cutoff:          1E-12
+    Fitting Condition:       1E-12
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: file /usr/local/hpc5/psi4conda/envs/p4env/share/psi4/basis/cc-pvdz-jkfit.gbs
+    Number of shells: 84
+    Number of basis function: 262
+    Number of Cartesian functions: 262
+    Spherical Harmonics?: false
+    Max angular momentum: 3
+
+  ==> CPHF Iterations <==
+
+  => Iterations <=
+
+             Iter  Converged  Remaining    Residual
+  CGR           1          0         18   1.342E-01
+  CGR           2          0         18   3.044E-02
+  CGR           3          0         18   1.046E-02
+  CGR           4          0         18   2.467E-03
+  CGR           5          0         18   6.137E-04
+  CGR           6          0         18   1.158E-04
+  CGR           7          0         18   1.742E-05
+  CGR           8          1         17   4.230E-06
+  CGR           9         18          0   9.652E-07
+
+    CGRSolver converged.
+
+  ## Total Hessian (Symmetry 0) ##
+  Irrep: 1 Size: 18 x 18
+
+                 1                   2                   3                   4                   5
+
+    1     0.57531812519992     0.01689762749759     0.00020724968768    -0.08640735002160     0.07745711859718
+    2     0.01689762749759     0.69142199565872    -0.00090085224019     0.06629924736660    -0.32032273233183
+    3     0.00020724968768    -0.00090085224019     0.65357787836003    -0.00155927576594     0.00600940927578
+    4    -0.08640735002160     0.06629924736660    -0.00155927576594     0.10184046140419    -0.08791734396005
+    5     0.07745711859718    -0.32032273233183     0.00600940927578    -0.08791734396005     0.33912742431296
+    6    -0.00185054646496     0.00610220210171    -0.06577043199654     0.00191401471041    -0.00671958303658
+    7    -0.08315623747153    -0.03534338743241     0.06890978942774     0.00634339101756     0.00348125734537
+    8    -0.04044816003812    -0.12260978678312     0.10384994358991    -0.01109799013927    -0.01463837468189
+    9     0.07462210902586     0.10487783495786    -0.26570993331077    -0.00144280809785    -0.00014567440229
+   10    -0.08555435800072    -0.04076363552852    -0.06982322479844     0.00652980460623     0.00398823260161
+   11    -0.04614233285142    -0.13384446151825    -0.10996177020032    -0.01153410904644    -0.01625920499107
+   12    -0.07526237400331    -0.11107688548061    -0.25207855794388     0.00198029698576     0.00105809563228
+   13    -0.29842159099913     0.04166457393361     0.00087340893529    -0.03201875684371     0.00220245612340
+   14    -0.02141455389488    -0.12035283232918     0.00145535343997     0.04074878629840     0.00888703035516
+   15     0.00251937795837     0.00093160447083    -0.06274379260855    -0.00078790316933    -0.00016815896451
+   16    -0.02177858810978    -0.04875442584522     0.00139205258381     0.00371244985004     0.00078827929908
+   17     0.01365030043342     0.00570781725254    -0.00045208383835     0.00350140948914     0.00320585722424
+   18    -0.00023581580894     0.00006609617964    -0.00727516249576    -0.00010432466223    -0.00003408851909
+
+                 6                   7                   8                   9                  10
+
+    1    -0.00185054646496    -0.08315623747153    -0.04044816003812     0.07462210902586    -0.08555435800072
+    2     0.00610220210171    -0.03534338743241    -0.12260978678312     0.10487783495786    -0.04076363552852
+    3    -0.06577043199654     0.06890978942774     0.10384994358991    -0.26570993331077    -0.06982322479844
+    4     0.00191401471041     0.00634339101756    -0.01109799013927    -0.00144280809785     0.00652980460623
+    5    -0.00671958303658     0.00348125734537    -0.01463837468189    -0.00014567440229     0.00398823260161
+    6     0.05596878334776    -0.00964335769465     0.03219202265604     0.00247287298731     0.00939464945673
+    7    -0.00964335769465     0.10779067244366     0.04633615026702    -0.08526493164878     0.00729294716156
+    8     0.03219202265604     0.04633615026702     0.11897713573901    -0.11619347252446     0.00609402482787
+    9     0.00247287298731    -0.08526493164878    -0.11619347252446     0.27784341642206     0.00801329063057
+   10     0.00939464945673     0.00729294716156     0.00609402482787     0.00801329063057     0.11062636227135
+   11    -0.03102958599394     0.00591988293840     0.01151357810549     0.01504681506756     0.05278266103797
+   12     0.00390735336860    -0.00887121866497    -0.01707804293736    -0.02543134657956     0.08535191601741
+   13     0.00021885145002    -0.03335122762357    -0.00138624795307     0.00508165570474    -0.03391132537250
+   14    -0.00048848318305    -0.02205293895270     0.00626974960984    -0.00225419256218    -0.02352889236423
+   15     0.00126801585508     0.03003163976376    -0.00284941629056     0.01169529054965    -0.02808568160712
+   16    -0.00003361145821    -0.00491954559116     0.00050222309328    -0.00100931556136    -0.00498343062899
+   17    -0.00005657254588     0.00165903586290     0.00048769798838    -0.00133131049450     0.00142760944422
+   18     0.00215340644070     0.00483807883540     0.00007896551568    -0.00087030011854    -0.00485094968672
+
+                11                  12                  13                  14                  15
+
+    1    -0.04614233285142    -0.07526237400331    -0.29842159099913    -0.02141455389488     0.00251937795837
+    2    -0.13384446151825    -0.11107688548061     0.04166457393361    -0.12035283232918     0.00093160447083
+    3    -0.10996177020032    -0.25207855794388     0.00087340893529     0.00145535343997    -0.06274379260855
+    4    -0.01153410904644     0.00198029698576    -0.03201875684371     0.04074878629840    -0.00078790316933
+    5    -0.01625920499107     0.00105809563228     0.00220245612340     0.00888703035516    -0.00016815896451
+    6    -0.03102958599394     0.00390735336860     0.00021885145002    -0.00048848318305     0.00126801585508
+    7     0.00591988293840    -0.00887121866497    -0.03335122762357    -0.02205293895270     0.03003163976376
+    8     0.01151357810549    -0.01707804293736    -0.00138624795307     0.00626974960984    -0.00284941629056
+    9     0.01504681506756    -0.02543134657956     0.00508165570474    -0.00225419256218     0.01169529054965
+   10     0.05278266103797     0.08535191601741    -0.03391132537250    -0.02352889236423    -0.02808568160712
+   11     0.13154358962220     0.12294402508733    -0.00158015757577     0.00649790343239     0.00316066093856
+   12     0.12294402508733     0.26250657981452    -0.00424827101254     0.00291953368482     0.01196355654942
+   13    -0.00158015757577    -0.00424827101254     0.52587324157843     0.18465311892986    -0.00895352256161
+   14     0.00649790343239     0.00291953368482     0.18465311892986     0.63518160163233    -0.01719149015807
+   15     0.00316066093856     0.01196355654942    -0.00895352256161    -0.01719149015807     0.02872432966709
+   16     0.00055405550492     0.00104965068890    -0.12817034137958    -0.15840551993269     0.00527608963250
+   17     0.00054859534298     0.00123327398156    -0.22555374310110    -0.53648345269335     0.01611679999538
+   18    -0.00016014487538    -0.00086758528842     0.00702787724644     0.01555927880387     0.00909260000664
+
+                16                  17                  18
+
+    1    -0.02177858810978     0.01365030043342    -0.00023581580894
+    2    -0.04875442584522     0.00570781725254     0.00006609617964
+    3     0.00139205258381    -0.00045208383835    -0.00727516249576
+    4     0.00371244985004     0.00350140948914    -0.00010432466223
+    5     0.00078827929908     0.00320585722424    -0.00003408851909
+    6    -0.00003361145821    -0.00005657254588     0.00215340644070
+    7    -0.00491954559116     0.00165903586290     0.00483807883540
+    8     0.00050222309328     0.00048769798838     0.00007896551568
+    9    -0.00100931556136    -0.00133131049450    -0.00087030011854
+   10    -0.00498343062899     0.00142760944422    -0.00485094968672
+   11     0.00055405550492     0.00054859534298    -0.00016014487538
+   12     0.00104965068890     0.00123327398156    -0.00086758528842
+   13    -0.12817034137958    -0.22555374310110     0.00702787724644
+   14    -0.15840551993269    -0.53648345269335     0.01555927880387
+   15     0.00527608963250     0.01611679999538     0.00909260000664
+   16     0.15613945587324     0.20531538784887    -0.00667486592233
+   17     0.20531538784887     0.52653348486643    -0.01551010710433
+   18    -0.00667486592233    -0.01551010710433    -0.00223295855272
+
+
+
+
+*** tstop() called on wr29 at Tue Apr  4 09:45:59 2017
+Module time:
+	user time   =     598.72 seconds =       9.98 minutes
+	system time =      15.16 seconds =       0.25 minutes
+	total time  =         41 seconds =       0.68 minutes
+Total time:
+	user time   =     620.38 seconds =      10.34 minutes
+	system time =      15.80 seconds =       0.26 minutes
+	total time  =         43 seconds =       0.72 minutes
+
+ # New Matrix #
+ Irrep: 1
+      1: -352.4680354
+      2: 1175.2763333
+      3: 1188.5439287
+      4: 1297.1175868
+      5: 1489.1157561
+      6: 1642.4405261
+      7: 1643.6840677
+      8: 1669.5804064
+      9: 3197.2239825
+     10: 3259.3731993
+     11: 3270.6566346
+     12: 4150.9965218
+
+
+            *********************************************
+            * Thermodynamic Analysis by R.A. King, 2012 *
+            *********************************************
+
+  ==> Inputs to Thermochemistry <==
+
+  Temperature:                       298.15 [K]
+  Pressure:                       101325.00 [Pa]
+  Multiplicity:                           1
+  Full point group:                 C1 (C1)
+  Rotor type:                ASYMMETRIC_TOP
+  Rotational symmetry no.:                1
+  Rotational constants: A =      4.39458  B =      0.84294  C =      0.81396 [cm^-1]
+  Rotational constants: A = 131746.29915  B =  25270.55615  C =  24401.99936 [MHz]
+    WARNING: At least one vibrational frequency is imaginary!
+
+  No.    Vib. Freq. [cm^-1]      Vib. Temp. [K]
+    1              -352.468            -507.122
+    2              1175.276            1690.958
+    3              1188.544            1710.047
+    4              1297.118            1866.261
+    5              1489.116            2142.503
+    6              1642.441            2363.103
+    7              1643.684            2364.892
+    8              1669.580            2402.151
+    9              3197.224            4600.086
+   10              3259.373            4689.505
+   11              3270.657            4705.740
+   12              4150.997            5972.351
+    Warning: used thermodynamic relations are not appropriate for low frequency modes.
+    Warning: vibration with imaginary frequency neglected in vibrational contributions.
+
+  ==> Components <==
+
+  Entropy, S
+    Electronic S          0.000 [cal/(mol K)]       0.000 [J/(mol K)]      0.00000000 [mEh/K] (multiplicity = 1)
+    Translational S      36.324 [cal/(mol K)]     151.980 [J/(mol K)]      0.05788607 [mEh/K] (mol. weight = 32.0262 [u], P = 101325.00 [Pa])
+    Rotational S         18.921 [cal/(mol K)]      79.164 [J/(mol K)]      0.03015200 [mEh/K] (symmetry no. = 1)
+    Vibrational S         0.148 [cal/(mol K)]       0.618 [J/(mol K)]      0.00023523 [mEh/K]
+  Total S                55.392 [cal/(mol K)]     231.762 [J/(mol K)]      0.08827329 [mEh/K]
+
+  Constant volume heat capacity, Cv
+    Electronic Cv         0.000 [cal/(mol K)]       0.000 [J/(mol K)]      0.00000000 [mEh/K]
+    Translational Cv      2.981 [cal/(mol K)]      12.472 [J/(mol K)]      0.00475022 [mEh/K]
+    Rotational Cv         2.981 [cal/(mol K)]      12.472 [J/(mol K)]      0.00475022 [mEh/K]
+    Vibrational Cv        0.793 [cal/(mol K)]       3.316 [J/(mol K)]      0.00126297 [mEh/K]
+  Total Cv                6.754 [cal/(mol K)]      28.259 [J/(mol K)]      0.01076341 [mEh/K]
+
+  Constant pressure heat capacity, Cp
+    Electronic Cp         0.000 [cal/(mol K)]       0.000 [J/(mol K)]      0.00000000 [mEh/K]
+    Translational Cp      4.968 [cal/(mol K)]      20.786 [J/(mol K)]      0.00791704 [mEh/K]
+    Rotational Cp         2.981 [cal/(mol K)]      12.472 [J/(mol K)]      0.00475022 [mEh/K]
+    Vibrational Cp        0.793 [cal/(mol K)]       3.316 [J/(mol K)]      0.00126297 [mEh/K]
+  Total Cp                8.741 [cal/(mol K)]      36.574 [J/(mol K)]      0.01393023 [mEh/K]
+
+  ==> Energy Analysis <== 
+
+  Raw electronic energy, E0
+  Total E0, Electronic energy at well bottom at 0 [K]             -115.03318805 [Eh]
+
+  Zero-point energy, ZPE_vib = Sum_i nu_i / 2
+    Electronic ZPE        0.000 [kcal/mol]       0.000 [kJ/mol]      0.00000000 [Eh]
+    Translational ZPE     0.000 [kcal/mol]       0.000 [kJ/mol]      0.00000000 [Eh]
+    Rotational ZPE        0.000 [kcal/mol]       0.000 [kJ/mol]      0.00000000 [Eh]
+    Vibrational ZPE      34.287 [kcal/mol]     143.456 [kJ/mol]      0.05463960 [Eh]       11992.004 [cm^-1]
+    Correction ZPE       34.287 [kcal/mol]     143.456 [kJ/mol]      0.05463960 [Eh]       11992.004 [cm^-1]
+  Total ZPE, Electronic energy at 0 [K]                           -114.97854845 [Eh]
+
+  Thermal Energy, E (includes ZPE)
+    Electronic E          0.000 [kcal/mol]       0.000 [kJ/mol]      0.00000000 [Eh]
+    Translational E       0.889 [kcal/mol]       3.718 [kJ/mol]      0.00141628 [Eh]
+    Rotational E          0.889 [kcal/mol]       3.718 [kJ/mol]      0.00141628 [Eh]
+    Vibrational E        34.325 [kcal/mol]     143.615 [kJ/mol]      0.05469990 [Eh]
+  Correction E           36.102 [kcal/mol]     151.051 [kJ/mol]      0.05753246 [Eh]
+  Total E, Electronic energy at  298.15 [K]                       -114.97565559 [Eh]
+
+  Enthalpy, H_trans = E_trans + k_B * T
+    Electronic H          0.000 [kcal/mol]       0.000 [kJ/mol]      0.00000000 [Eh]
+    Translational H       1.481 [kcal/mol]       6.197 [kJ/mol]      0.00236046 [Eh]
+    Rotational H          0.889 [kcal/mol]       3.718 [kJ/mol]      0.00141628 [Eh]
+    Vibrational H        34.325 [kcal/mol]     143.615 [kJ/mol]      0.05469990 [Eh]
+  Correction H           36.695 [kcal/mol]     153.530 [kJ/mol]      0.05847665 [Eh]
+  Total H, Enthalpy at  298.15 [K]                                -114.97471140 [Eh]
+
+  Gibbs free energy, G = H - T * S
+    Electronic G         -0.000 [kcal/mol]      -0.000 [kJ/mol]     -0.00000000 [Eh]
+    Translational G      -9.349 [kcal/mol]     -39.115 [kJ/mol]     -0.01489827 [Eh]
+    Rotational G         -4.752 [kcal/mol]     -19.884 [kJ/mol]     -0.00757354 [Eh]
+    Vibrational G        34.281 [kcal/mol]     143.430 [kJ/mol]      0.05462977 [Eh]
+  Correction G           20.179 [kcal/mol]      84.431 [kJ/mol]      0.03215796 [Eh]
+  Total G, Free enthalpy at  298.15 [K]                           -115.00103008 [Eh]
+
+
+*** Psi4 exiting successfully. Buy a developer a beer!
