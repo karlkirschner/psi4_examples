@@ -1,0 +1,32 @@
+2018-12-06 15:13:04,492 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:04,492 - DEBUG - ... running extract_energies_and_write: Extracting QM energies and writinga csv file.
+2018-12-06 15:13:04,493 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'program': None, 'outputfile': None, 'inputfiles': ['all']}
+2018-12-06 15:13:04,493 - ERROR - energies_raw.csv is already present. Exiting to avoid overwriting.
+2018-12-06 15:13:09,972 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,973 - DEBUG - ... running extract_energies_and_write: Extracting QM energies and writinga csv file.
+2018-12-06 15:13:09,973 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'program': None, 'outputfile': None, 'inputfiles': ['all']}
+2018-12-06 15:13:09,974 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,975 - DEBUG - ... running set_program_abbrev_guess: Guessing program abbreviation based on 1) log file content, or 2) directory name. Input parameters: {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'logfile': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt/dimer_01_opt.log'}
+
+2018-12-06 15:13:09,975 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'logfile': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt/dimer_01_opt.log', 'local_variables': {...}}
+2018-12-06 15:13:09,979 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,979 - DEBUG - ... running extract_psi4_energies: Extracting Psi4 energies.
+2018-12-06 15:13:09,979 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputfile': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt/dimer_01_opt.log'}
+2018-12-06 15:13:09,981 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,981 - DEBUG - ... running grab_last_item_in_line: Grabbing lines.
+2018-12-06 15:13:09,981 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputline': '  @DF-RHF Final Energy:  -347.18902729421148\n'}
+2018-12-06 15:13:09,981 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,981 - DEBUG - ... running extract_psi4_energies: Extracting Psi4 energies.
+2018-12-06 15:13:09,981 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputfile': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt/dimer_02_opt.log'}
+2018-12-06 15:13:09,989 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,989 - DEBUG - ... running grab_last_item_in_line: Grabbing lines.
+2018-12-06 15:13:09,989 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputline': '  @DF-RHF Final Energy:  -347.18735383006822\n'}
+2018-12-06 15:13:09,990 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:09,990 - DEBUG - ... running extract_psi4_energies: Extracting Psi4 energies.
+2018-12-06 15:13:09,990 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputfile': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt/dimer_03_opt.log'}
+2018-12-06 15:13:10,007 - DEBUG - CoffeWorkDir: /home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt
+2018-12-06 15:13:10,007 - DEBUG - ... running grab_last_item_in_line: Grabbing lines.
+2018-12-06 15:13:10,007 - DEBUG - ... with variables {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'inputline': '  @DF-RHF Final Energy:  -347.18979776823898\n'}
+2018-12-06 15:13:34,614 - INFO - relative_energies_csv: Calculating relative energies and saving them to a csv file.
+   Input parameters: {'work_dir': '/home/karl/git/courses/05_Project_Seminar/00_Examples/methanol_butanol/00_Psi4_Opt', 'outputfile': 'energies_rel.csv', 'convert': 'hartree2kcal', 'inputfile': 'energies_raw.csv'}.
+

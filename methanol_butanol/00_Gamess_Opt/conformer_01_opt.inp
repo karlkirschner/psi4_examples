@@ -1,0 +1,38 @@
+ $CONTRL  ICHARG=0 MPLEVL=0
+          RUNTYP=OPTIMIZE SCFTYP=RHF EXETYP=RUN
+          MULT=1 UNITS=ANGS MAXIT=200
+          COORD=UNIQUE                          $END
+ $SCF     DIRSCF=.T. CONV=1.0E-08              $END
+ $SYSTEM  TIMLIM=50000 MWORDS=560 MEMDDI=0      $END
+ $STATPT  NSTEP=200 OPTTOL=1.0E-06
+          HESS=CALC IHREP=10                    $END
+ $FORCE   METHOD=ANALYTIC VIBANL=.F.           $END
+ $BASIS   GBASIS=N31 NGAUSS=6 NDFUNC=1 NPFUNC=0
+          DIFFSP=.F.                            $END
+ $GUESS   GUESS=HUCKEL                         $END
+ $DATA
+ Full optimization
+ C1 
+ C     6.0     -4.740   0.987  -0.312
+ H     1.0     -4.864   0.918  -1.393
+ H     1.0     -4.007   1.759  -0.079
+ C     6.0     -4.255  -0.358   0.232
+ H     1.0     -4.131  -0.289   1.313
+ H     1.0     -4.988  -1.130  -0.001
+ C     6.0     -2.915  -0.716  -0.413
+ H     1.0     -3.039  -0.785  -1.494
+ H     1.0     -2.181   0.057  -0.180
+ C     6.0     -2.429  -2.060   0.132
+ H     1.0     -1.474  -2.315  -0.328
+ H     1.0     -2.305  -1.991   1.212
+ H     1.0     -3.162  -2.833  -0.101
+ O     8.0     -5.992   1.321   0.290
+ H     1.0     -6.360   2.164  -0.009
+ C     6.0     -8.412   4.775  -0.146
+ H     1.0     -8.698   5.706  -0.537
+ H     1.0     -8.293   4.854   0.894
+ H     1.0     -9.153   4.063  -0.360
+ O     8.0     -7.176   4.368  -0.738
+ H     1.0     -6.798   5.102  -1.229
+ $END
+

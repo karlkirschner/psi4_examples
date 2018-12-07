@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --output slurm.%N.%j.out     # STDOUT (%N: nodename, %j: job-ID)
+#SBATCH --error slurm.%N.%j.err      # STDERR
+#SBATCH --partition hpc3              # partition (queue)
+#SBATCH --nodelist wr86
+#SBATCH --ntasks 16                  # number of tasks/cores
+#SBATCH --mem 100G                  # memory per node in MB
+#SBATCH --time 6:00:00               # total runtime of job allocation
+
+module load psi4/default
+module load python3/3.6.5
+export PSI_SCRATCH=$TMPDIR
+
+psi4 -n 16 conformer_02_opt.inp conformer_02_opt.log
